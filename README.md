@@ -1,10 +1,12 @@
-# WAPH-Web Application Programming :computer: and Hacking :man_technologist:
+# WAPH-Web Application Programming and Hacking
 
 ## Instructor: Dr. Phu Phung
 
-# Lab 2 - Front-end Web Development 
+# Individual Project 1
 
-## Student :book:
+# Front-end Web Development with a Professional Profile Website on github.io cloud service
+
+## Student
 
 **Name**: Vishal Kothapalli :man_technologist:
 
@@ -16,11 +18,11 @@
 
 ## :label: Lab2 Information
 
-Lab2's URL: [[https://github.com/kothapvl-uc/waph-kothapvl/tree/main/labs/lab2](https://github.com/kothapvl-uc/waph-kothapvl/tree/main/labs/lab2)]
+Project 1's URL: [[https://github.com/kothapvl-uc/kothapvl-uc.github.io]((https://github.com/kothapvl-uc/kothapvl-uc.github.io))]
 
 ## Overview
 
-Lab 2 features HTML for structure, simple JavaScript for interactivity, Ajax for asynchronous data exchange, CSS for styling, jQuery for streamlined scripting, and Web API integration for external service interaction. The combined implementation results in a responsive, visually appealing web application.
+In this assignment, I will elevate my expertise in front-end web development by creating a Professional Profile Website and launching it on the github.io cloud platform. The project encompasses overall, non-technical, and technical criteria
 
 ### Task 1: Basic HTML with forms, and JavaScript 
 
