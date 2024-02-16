@@ -8,7 +8,7 @@
 
 ## Student
 
-**Name**: Vishal Kothapalli :man_technologist:
+**Name**: Vishal Kothapalli
 
 **Email**: kothapvl@mail.uc.edu
 
@@ -16,78 +16,128 @@
 
 ![Vishal's headshot](images/headshot.jpg)
 
-## :label: Lab2 Information
+## Individual Project Information
 
-Project 1's URL: [[https://github.com/kothapvl-uc/kothapvl-uc.github.io]((https://github.com/kothapvl-uc/kothapvl-uc.github.io))]
+Project 1's URL: [(https://github.com/kothapvl-uc/kothapvl-uc.github.io)]
 
 ## Overview
 
 In this assignment, I will elevate my expertise in front-end web development by creating a Professional Profile Website and launching it on the github.io cloud platform. The project encompasses overall, non-technical, and technical criteria
 
-### Task 1: Basic HTML with forms, and JavaScript 
+### Task 1: General Requirements 
 
 
-####  a. HTML (5 pts) 
+####  a. Deploy website 
   
-I have created a straightforward HTML file incorporating fundamental tags, including an image of my headshot, and integrating a form.
+I have created the webpage and deployed it successfully to github.io
 
-![Response](<images/2-1b.png>)
-<div align="center">Image 1: Basic HTML</div>
+URL: [(https://kothapvl-uc.github.io/)]
+
+![Response](<images/General Requirement-1.png>)
+<div align="center">Deployed webpage</div>
 
   
-####  b. Simple JavaScript (15 pts)
+####  b. Link to WAPH
 
-The HTML page incorporates inline JavaScript to display the current date/time and log key presses when clicked. Additionally, a <script> tag houses JavaScript code for a digital clock. Furthermore, external JavaScript, coupled with HTML, is used to toggle the visibility of an email address upon clicking. Lastly, an analog clock is displayed using external JavaScript code integrated into the HTML page. These steps enhance interactivity, provide time-related information, and control the visibility of specific content based on user interactions.
+Created an HTML page WAPH.html with the existing labs and hackathon details.
 
-![Request](<images/2-1a.png>)
-<div align="center">Image 2: Simple JavaScript</div>
-
-
-### Task 2: Ajax, CSS, jQuery, and Web API integration
+![Request](<images/General Requirement-2.png>)
+<div align="center">Link to redirect to the WAPH page</div>
 
 
-####  a. Ajax (7.5 pts)
 
-The HTML page is enhanced with a user input field, a button, and a div element. Upon clicking the new button, JavaScript retrieves the user input, initiates an Ajax GET request to the echo.php web application from Lab 1, and dynamically displays the response in the designated div. To understand the Ajax request/response process, inspecting browser network connections provides insights into the underlying interactions between the client and the web application, showcasing the asynchronous data exchange mechanism.
+![Request](<images/General Requirement-3.png>)
+<div align="center">WAPH page</div>
 
-![Stream](<images/2-2a.png>)
+
+### Task 2: Non-technical requirements
+
+
+####  a. Use an open-source CSS template
+
+Utilized bootstarp CSS to create the navigation bars and also to make the website all device compatible.
+
+  ```
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  ```
+
+![Stream](<images/Non-Tech Requirement-1.png>)
 <div align="center">Image 3: Ajax implementation</div>
 
-#### b. CSS (7.5 pts)
+#### b. Page tracker
 
-The HTML page is enriched with CSS styling through inline, internal, and external methods. Inline CSS is directly applied within HTML tags, internal CSS is housed within a <style> tag in the HTML file, and external CSS is linked through a remote stylesheet. These diverse CSS approaches collectively contribute to the visual presentation and formatting of the web page, offering flexibility and maintainability in styling implementations.
-
-![Stream](<images/2-2bi.png>)
-<div align="center">Image 4: Using CSS style hosted publicly</div>
-
-![Stream](<images/2-2bii.png>)
-<div align="center">Image 5: CSS Style</div>
-
-####  c. jQuery (5 pts) 
-
-  **i.** The jQuery library is incorporated into the HTML page, enabling the implementation of HTML and JavaScript code in jQuery. Upon clicking a designated button, jQuery facilitates the initiation of an Ajax GET request to the echo.php web application. The retrieved response content is then dynamically displayed, showcasing the streamlined and concise nature of jQuery in handling asynchronous requests and enhancing user interactions.
-
-  ![Stream](<images/2-2ci.png>)
-<div align="center">Image 6: jQuery GET</div>
-
-  **ii.** 
-Upon clicking a specific button, an Ajax POST request is triggered through jQuery, directed towards the echo.php web application. The resulting response content is dynamically displayed, showcasing the streamlined and efficient handling of asynchronous requests with jQuery.
-
-  ![Stream](<images/2-2cii.png>)
-<div align="center">Image 7: jQuery POST</div>
+Added google page analytics tracker and linked/installed the script into the webpage.
 
 
-#### d. Web API integration (10 pts)
+![Stream](<images/Non-Tech Requirement-2.png>)
+<div align="center">Portfolio Analytics</div>
 
-**i.** JavaScript code with jQuery Ajax is implemented to send a request to the specified API https://v2.jokeapi.dev/joke/Programming?type=single. Upon loading the page, the code handles the response, displaying a random joke. Browser network inspection allows scrutiny of the request and response details, providing insights into the interaction with the external API and the dynamic content retrieval process.
+### Task 3: Technical requirements
 
-  ![Stream](<images/2-2di-1.png>)
-<div align="center">Image 8: Web API integration to get a random joke from a Programming Joke API</div>
 
-  ![Stream](<images/2-2di-2.png>)
-<div align="center">Image 9: Displaying a random joke from a Programming Joke API</div>
+####  a. Basic JavaScript
 
-**ii.** HTML and JavaScript code is implemented to utilize the fetch() method, calling the API https://api.agify.io/?name=input based on user input. The response results are dynamically displayed. Browser network inspection facilitates the examination of the request and response details, offering insights into the interaction with the external API and the presentation of dynamic content based on user input.
+Utilized the JavaScript used in the previous labs and implemented them in current website
 
-  ![Stream](<images/2-2dii.png>)
-<div align="center">Image 10: Using Agify API to fetch age</div>
+
+
+![Stream](<images/Tech Requirement-1.png>)
+<div align="center">Basic JavaScipt with clocks and show mail</div>
+
+#### b. APIs
+
+Utilized the joke API from previous labs. Used the OpenStreetMap API to show my address location in the contact section of my webpage.
+
+
+![Stream](<images/Tech Requirement-2.png>)
+<div align="center">Open Street Map API</div>
+
+#### b. JS Cookies
+
+Enabled the cookied on the webpage to get, store and fetch cookies using javasceipt code.
+
+  ```
+function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+  ```
+
+
+
+![Stream](<images/Tech Requirement-3.png>)
+<div align="center">Cookies- On first load</div>
+
+
+![Stream](<images/Tech Requirement-3_1.png>)
+<div align="center">Cookies- On 2nd or future reload</div>
