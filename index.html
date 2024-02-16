@@ -1,78 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Your Name] - Portfolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">[Your Name]</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Portfolio Website</title>
 
-  <header class="hero">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <img src="your_headshot.jpg" alt="Your photo" class="img-thumbnail">
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container-fluid px-0">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <span class="material-icons-outlined me-1">important_devices</span>
+            Vishal Kothapalli
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="container px-3">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link me-lg-3" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-lg-3" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-lg-3" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-lg-3" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-lg-3" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="col-md-8">
-          <h1>[Your Name]</h1>
-          <p>Web Developer | [Your Specialization]</p>
-          <ul class="list-unstyled">
-            <li><i class="fas fa-envelope"></i> [Your Email Address]</li>
-            <li><i class="fas fa-phone"></i> [Your Phone Number]</li>
-            <li><i class="fab fa-linkedin"></i> <a href="[Your LinkedIn URL]">LinkedIn</a></li>
-          </ul>
+      </nav>
+      <!-- End Navbar -->
+
+      <!-- Hero -->
+      <header class="bg-light py-5">
+        <div class="container px-5">
+          <div class="row align-items-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+              <div class="my-5">
+                <h2 class="text-center fw-bold mb-2">Hi! My name is</h2>
+                <h2 class="text-center fw-bold mb-2">Vishal Kothapalli</h2>
+                <h2 class="text-primary text-center fw-bold mb-2">
+                  And I am a 
+                  <span class="typing" id="typed-text" style=" font-size: 2rem;font-family: monospace; font-weight: 800;"></span>
+                  <!-- <span class="typed-cursor">|</span> -->
+                </h2>
+                <p class="lead text-muted mb-4">
+                  I specialize in building middleware integrations, APIs, web applications. Scroll down to see what I have been working on.
+                </p>
+                <div class="d-grid gap-3 d-sm-flex justify-content-center">
+                  <a class="btn btn-primary btn-large text-uppercase" href="#about">
+                    Learn More
+                    <span class="material-icons-outlined ms-2">help_outline</span>
+                  </a>
+                  <a class="btn btn-outline-primary btn-large text-uppercase" href="#experience">
+                    View My Work
+                    <span class="material-icons-outlined ms-2">manage_search</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 justify-content-center">
+              <img class="img-fluid rounded-3 my-5" src="images/headshot.jpg" alt="Hero Image">
+            </div>
+          </div>
         </div>
-      </div>
+      </header>
+      <!-- End Hero -->
+
+      <main>
+        <!-- About -->
+        <section id="about" class="text-center py-5">
+          <div class="container py-5">
+            <div class="row justify-content-center">
+              <h2 class="fw-bold">About</h2>
+              <p class="lead text-muted mb-5">
+                Cloud Engineer with four years of experience in Oracle Integration Cloud (OIC) and Oracle ERP (Enterprise Resource Planning). In my role as an Oracle Integration Cloud specialist, I have successfully designed and implemented complex integration solutions, seamlessly connecting various business applications, databases, and systems. I have a deep understanding of OIC's capabilities, allowing me to develop robust and efficient integration flows that improve data accuracy, reduce manual effort, and enhance overall productivity.
+              </p>
+            </div>
+          </div>
+          <div class="container mb-5">
+            <div class="row">
+              <div class="col-lg-4 mx-auto mb-5">
+                <div class="d-flex mb-5 about">
+                  <span class="material-icons-outlined m-auto text-primary">api</span><!--enterprise didn't work-->
+                </div>
+                <h5>Oracle ERP</h5>
+                <p class="text-muted mb-0">
+                  I have successfully executed ERP implementations and customizations, ensuring that businesses can fully leverage Oracle's powerful tools to drive growth and profitability. My proven track record in Oracle Integration Cloud and Oracle ERP makes me a reliable and results-oriented professional in the world of enterprise software integration and resource planning.
+                </p>
+              </div>
+              <div class="col-lg-4 mx-auto mb-5">
+                <div class="d-flex mb-5 about">
+                  <span class="material-icons-outlined m-auto text-primary">integration_instructions</span>
+                </div>
+                <h5>Middleware</h5>
+                <p class="text-muted mb-0">
+                  I developed lot of integrations to automate and orchestrate data from multiple sources to a target required format data. I had worked with Oracle Integration Cloud(OIC), Oracle SOACS, OSB, Snaplogic, Workato integration platforms. I have four years of experience working on Integration Platform as a Service(IPaaS). Integration and Process automation are my top strengths in the IT field.
+                </p>
+              </div>
+              <div class="col-lg-4 mx-auto mb-5">
+                <div class="d-flex mb-5 about">
+                  <span class="material-icons-outlined m-auto text-primary">cloud</span>
+                </div>
+                <h5>Cloud Migration, and Lift and Shift</h5>
+                <p class="text-muted mb-0">
+                  I have extensive experience in cloud migration, specifically leading a project to transition Oracle E-Business Suite (EBS) to Oracle ERP Finance Cloud. Additionally, I successfully managed a lift-and-shift initiative, migrating integrations from on-premises servers to the cloud, including projects involving Service-Oriented Architecture (SOA), Oracle Service Bus (OSB), and transitioning them to Oracle Integration Cloud (OIC) and Oracle SOA Cloud Service (SOACS).
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End About -->
+
+        <hr>
+
+        <!-- Work Experience -->
+        <section id="experience" class="text-center py-5">
+          <div class="container py-5">
+            <div class="row justify-content-center">
+              <h2 class="fw-bold">Experience</h2>
+              <p class="lead text-muted mb-5">My work experience</p>
+            </div>
+          </div>
+          <div class="container mb-5">
+            <div class="row">
+              <div class="col-lg-4 mx-auto mb-5">
+                <div class="card h-100 shadow-lg border-0 bg-light">
+                  <img class="card-img-top" src="images/accenture.jpeg" alt="Project 1">
+                  <div class="card-body p-4">
+                    <h5 class="card-title mb-3">Packaged App Development Senior Analyst</h5>
+                    <div class="mb-2">
+                      <div class="badge bg-primary rounded-pill">OIC</div>
+                      <div class="badge bg-primary rounded-pill">Oracle ERP</div>
+                      <div class="badge bg-primary rounded-pill">Cloud Migration</div>
+                      <div class="badge bg-primary rounded-pill">Snaplogic</div>
+                    </div>
+                    <p class="card-text">
+Built 20 ERP and EPM (EPBCS, EDMCS) integrations in OIC and SnapLogic. Designed high-impact common services, 
+including robust notification and monitoring systems utilized in over 90% of integrations, delivering a remarkable 40% 
+reduction in integration time and improved overall system reliability. Pioneered development of ERP Outbound- common 
+OIC service has decreased outbound integrations count from 30 to 1. Created 5 FBDI inbound imports, 15 BIP data models and reports.
+Spearheaded development and implementation of an advanced contract conversion automation system, enabling efficient loading of 4000+ contracts 
+and 8000+ sites from EBS to ERP cloud, saving 300+ hours monthly and enhancing data integrity.
+Orchestrated automation of bulk data updates for conversion team, leveraging APIs and OIC, resulting in a 95% decrease in manual effort and increased efficiency.
+Streamlined error handling processes for 10 Bill Management OIC integrations, resulting in a 30% reduction in resolution time and increasing team efficiency.
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col-lg-4 mx-auto mb-5">
+                <div class="card h-100 shadow-lg border-0 bg-light">
+                  <img class="card-img-top" src="images/kpmg.jpg" alt="Project 2">
+                  <div class="card-body p-4">
+                    <h5 class="card-title mb-3">Integration Developer</h5>
+                    <div class="mb-2">
+                      <div class="badge bg-primary rounded-pill">SOACS</div>
+                      <div class="badge bg-primary rounded-pill">Lift and Shift</div>
+                      <div class="badge bg-primary rounded-pill">OIC</div>
+                      <div class="badge bg-primary rounded-pill">Workato</div>
+                    </div>
+                    <p class="card-text">
+Developed and implemented 6 HR-HCM APIs in OIC, streamlining data integration processes and reducing manual data entry by 75%.
+Collaborated in migration project from on-premise SOA/OSB to SOACS and OIC- close to 25 integration migrations.
+Streamlined finance applications through seamless integration of Node.js, enabling automated API testing with Newman Report by Postman; resulted in a remarkable 95% reduction in manual testing effort, ensuring optimal performance and efficiency.
+Completed 4 integration projects and 15 plus enhancements in SOA and OSB.
+Hired, coached and led a 5-member associate engineers to train and implement projects on SOA and OSB.
+                      
+                    </p>
+                  </div>
+                 
+                </div>
+              </div>
+              <div class="col-lg-4 mx-auto mb-5">
+                <div class="card h-100 shadow-lg border-0 bg-light">
+                  <img class="card-img-top" src="images/infosys.jpg" alt="Project 3">
+                  <div class="card-body p-4">
+                    <h5 class="card-title mb-3">Mentee</h5>
+                    <div class="mb-2">
+                      <div class="badge bg-primary rounded-pill">Team Work</div>
+                      <div class="badge bg-primary rounded-pill">Public Speaking</div>
+                      <div class="badge bg-primary rounded-pill">Conflict Resolution</div>
+                      <div class="badge bg-primary rounded-pill">Leadership</div>
+                    </div>
+                    <p class="card-text">
+Mentored by 3 experts as part of Infosys Inspire program.
+                    </p>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Experience -->
+
+        <hr>
+
+        <!-- Education -->
+        <section id="education" class="text-center py-5">
+          <div class="container py-5">
+            <div class="row justify-content-center">
+              <h2 class="fw-bold">Education</h2>
+              <p class="lead text-muted mb-5">What and where I studied</p>
+            </div>
+          </div>
+          <div class="container mb-5">
+            <div class="row">
+              <div class="col-lg-4 mx-auto mb-5">
+                <div class="text-center fs-4 fst-italic mb-4 px-2">
+                  Master of Science in Information Technology
+                </div>
+                <div class="d-flex align-items-center justify-content-center testimonial">
+                  <img class="rounded-circle me-3" src="images/uc.jpg" alt="User 1">
+                  <div class="fw-bold">
+                    University of Cincinnati
+                    </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mx-auto mb-5">
+                <div class="text-center fs-4 fst-italic mb-4 px-2">
+                  Bachelor of Technology in Computer Science
+                </div>
+                <div class="d-flex align-items-center justify-content-center testimonial">
+                  <img class="rounded-circle me-3" src="images/mgit.jpg" alt="User 2">
+                  <div class="fw-bold">
+                     Mahatma Gandhi Institute of Technology
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div>
+        </section>
+        <!-- End Education -->
+
+        <hr>
+
+        <!-- Contact -->
+        <section id="contact" class="text-center py-5">
+          <div class="container py-5">
+            <div class="row justify-content-center">
+              <h2 class="fw-bold">Contact</h2>
+              <p class="lead text-muted mb-5">
+                Do you need an iPaaS or PaaS developer? I would love to hear
+                from you.
+              </p>
+            </div>
+          </div>
+          <div class="container mb-5">
+            <div class="row">
+              <div class="col-xl-5 col-xxl-6 mb-5">
+                <div id="map"></div>
+              </div>
+              <div class="col-lg-8 col-xl-7 col-xxl-6 mb-5">
+                <div class="mb-5">
+                  <h6 class="text-uppercase mb-2">Address</h6>
+                  <p class="lead mb-0">Cincinnati, Ohio</p>
+                </div>
+                <div class="mb-5">
+                  <h6 class="text-uppercase mb-2">Phone</h6>
+                  <p class="lead mb-0">513-306-5810</p>
+                </div>
+                <div class="mb-5">
+                  <h6 class="text-uppercase mb-2">Email</h6>
+                  <p class="lead mb-0">kothapvl@mail.uc.edu / vishalkothapalli98@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Contact -->
+      </main>
     </div>
-  </header>
 
-  <section id="about" class="section">
-    </section>
+    <hr>
+    <div>
+    <div>
+      <div id="email" onclick="showhideEmail()">Show my email</div>
+	   <!-- <script src="email.js"></script>  -->
+    </div>
 
-  <section id="experience" class="section">
-    </section>
+    <div id="digit-clock"></div>
+  <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
+  <script type="text/javascript" src="https://waph-uc.github.io/clock.js"></script>
+  <br>
+  <a href="/waph.html">Click here for my Course Work</a>
+  <br>
+  <b>Joke of the day &#x1F606;</b>
+  <div id="joke"></div>
+  
+  <script>
+  
+      // Function to fetch and display a joke
+      function fetchJoke() {
+          fetch('https://v2.jokeapi.dev/joke/Any')
+              .then(response => response.json())
+              .then(data => {
+                  // Check if the joke is a single joke or a setup and delivery
+                  const joke = data.type === 'single' ? data.joke : `${data.setup}<br>${data.delivery}`;
+                  // Display the joke
+                  document.getElementById('joke').innerHTML = joke;
+              })
+              .catch(error => {
+                  console.error('Error fetching joke:', error);
+              });
+      }
 
-  <section id="skills" class="section">
-    </section>
+      // Fetch a joke immediately when the page loads
+      fetchJoke();
 
-  <section id="projects" class="section">
-    </section>
+      // Fetch a new joke every 1 minute
+      setInterval(fetchJoke, 60000);
+  </script>
 
-  <section id="contact" class="section">
-    </section>
 
-  <script src="https://
+  
+
+    <div>
+      <a href="https://info.flagcounter.com/2t4x"><img src="https://s11.flagcounter.com/count2/2t4x/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+      <div class="container px-5 mb-2">Vishal Kothapalli's Portfolio</div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
