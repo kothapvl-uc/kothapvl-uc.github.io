@@ -309,45 +309,7 @@ Mentored by 3 experts as part of Infosys Inspire program.
     </div>
 
     <hr>
-    <div>
-    <div>
-      <div id="email" onclick="showhideEmail()">Show my email</div>
-	   <!-- <script src="email.js"></script>  -->
-    </div>
-
-    <div id="digit-clock"></div>
-  <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
-  <script type="text/javascript" src="https://waph-uc.github.io/clock.js"></script>
-  <br>
-  <a href="/waph.html">Click here for my Course Work</a>
-  <br>
-  <b>Joke of the day &#x1F606;</b>
-  <div id="joke"></div>
   
-  <script>
-  
-      // Function to fetch and display a joke
-      function fetchJoke() {
-          fetch('https://v2.jokeapi.dev/joke/Any')
-              .then(response => response.json())
-              .then(data => {
-                  // Check if the joke is a single joke or a setup and delivery
-                  const joke = data.type === 'single' ? data.joke : `${data.setup}<br>${data.delivery}`;
-                  // Display the joke
-                  document.getElementById('joke').innerHTML = joke;
-              })
-              .catch(error => {
-                  console.error('Error fetching joke:', error);
-              });
-      }
-
-      // Fetch a joke immediately when the page loads
-      fetchJoke();
-
-      // Fetch a new joke every 1 minute
-      setInterval(fetchJoke, 60000);
-  </script>
-
 <br>
   
 
